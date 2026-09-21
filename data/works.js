@@ -3,14 +3,6 @@
  * ----------------------------------------------------
  * Allowed AI Models: "Midjourney", "ChatGPT", "NanoBanana", "ComfyUI"
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
- *
- * Each work record contains:
- *   - id: Unique numeric string identifier (e.g. "001")
- *   - name: Project title
- *   - file: Relative path to image file in images/
- *   - model: Array of AI Models used to generate / upscale
- *   - category: Primary thematic category
- *   - description: Prompt summary, stylistic notes, and workflow context
  */
 
 const ALLOWED_MODELS = [
@@ -37,7 +29,7 @@ const PORTFOLIO_WORKS = [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Intricate sci-fi tabletop miniature concept optimized for high-resolution resin 3D printing."
+    "description": "Intricate sci-fi tabletop miniature concept optimized for 3D printing."
   },
   {
     "id": "002",
@@ -47,64 +39,64 @@ const PORTFOLIO_WORKS = [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Detailed hard-surface mech figurine designed for resin casting and hobbyist painting."
+    "description": "Detailed hard-surface mech figurine designed for 3D printing and hobbyist painting."
   },
   {
     "id": "003",
-    "name": "3D Print Miniature - Cybernetic Assassin",
+    "name": "3D Print Miniature - Locomotive",
     "file": "images/3d_print_mini_0017.png",
     "model": [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Stylized cyber-warrior miniature sculpt with sharp edge geometry and dynamic pose."
+    "description": "Detailed hard-surface locomotive figure designed for 3D printing and hobbyist painting."
   },
   {
     "id": "004",
-    "name": "3D Print Miniature - Heavy Armor Sentinel",
+    "name": "3D Print Miniature - Zeppeline",
     "file": "images/3d_print_mini_0019.png",
     "model": [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Heavy exoskeleton armor figurine concept with mechanical joint articulations."
+    "description": "Detailed hard-surface zeppeline figure designed for 3D printing and hobbyist painting."
   },
   {
     "id": "005",
-    "name": "3D Print Miniature - Drone Operator",
+    "name": "3D Print Miniature - Sword",
     "file": "images/3d_print_mini_0022.png",
     "model": [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Futuristic infantry character equipped with tactical gear and drone accessories."
+    "description": "Detailed hard-surface sword figure designed for 3D printing and hobbyist painting."
   },
   {
     "id": "006",
-    "name": "3D Print Miniature - Cyber Commando",
+    "name": "3D Print Miniature - Paladin",
     "file": "images/3d_print_mini_0028.png",
     "model": [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Special-forces cyberpunk miniature model with detailed ballistic vest and weaponry."
+    "description": "Detailed paladine figurine designed for 3D printing and hobbyist painting."
   },
   {
     "id": "007",
-    "name": "3D Print Miniature - Heavy Enforcer",
+    "name": "3D Print Miniature - Space Marine",
     "file": "images/3d_print_mini_0031.png",
     "model": [
       "Midjourney"
     ],
     "category": "3D Miniatures",
-    "description": "Monolithic armor enforcer tabletop miniature with reinforced plate plating."
+    "description": "Detailed WH 40000 Space Marine figurine designed for 3D printing and hobbyist painting."
   },
   {
     "id": "008",
     "name": "Clicker Device - Macro Showcase",
     "file": "images/Clicker_002.png",
     "model": [
-      "Midjourney"
+      "ChatGPT"
     ],
     "category": "Product & Tech",
     "description": "Industrial design concept of a tactile clicker device highlighting ergonomics and precision surfacing."
@@ -114,7 +106,7 @@ const PORTFOLIO_WORKS = [
     "name": "Clicker Device - Studio Angle",
     "file": "images/Clicker_003.png",
     "model": [
-      "Midjourney"
+      "ChatGPT"
     ],
     "category": "Product & Tech",
     "description": "Three-quarter product angle displaying tactile button mechanisms and minimalist housing."
@@ -124,20 +116,20 @@ const PORTFOLIO_WORKS = [
     "name": "Clicker Device - Top Profile",
     "file": "images/Clicker_004.png",
     "model": [
-      "Midjourney"
+      "ChatGPT"
     ],
     "category": "Product & Tech",
     "description": "Top-down layout showcasing button placement, matte finish materials, and ergonomic contours."
   },
   {
     "id": "011",
-    "name": "Orbital Space Station Lounge",
+    "name": "Space Beer Fest",
     "file": "images/dosome3d_An_animated_scene_set_in_a_space_station_converted_int_e09c03c3-1512-49fe-9b40-6215b05da147.png",
     "model": [
       "Midjourney"
     ],
     "category": "Environments & Sci-Fi",
-    "description": "Atmospheric sci-fi interior featuring a converted orbital module with ambient neon illumination."
+    "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
     "id": "012",
@@ -154,8 +146,7 @@ const PORTFOLIO_WORKS = [
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/dosome3d_lighthouse_UPSCALE_cc.jpg",
     "model": [
-      "Midjourney",
-      "ComfyUI"
+      "Midjourney"
     ],
     "category": "Environments & Sci-Fi",
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
@@ -172,23 +163,23 @@ const PORTFOLIO_WORKS = [
   },
   {
     "id": "015",
-    "name": "Quantum Core PCB - Macro Detail",
+    "name": "Handheld Device - Concept 01",
     "file": "images/dosome3d_ultra_photorealistic_render_of_modern_electronic_compa_3d67e8b7-33be-4cd7-9d51-57456175f856.png",
     "model": [
       "Midjourney"
     ],
     "category": "Product & Tech",
-    "description": "Photorealistic macro visualization of advanced microelectronics, silicon dies, and gold circuit traces."
+    "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
     "id": "016",
-    "name": "Integrated Circuit Processor Architecture",
+    "name": "Hadheld Device - Concept 02",
     "file": "images/dosome3d_ultra_photorealistic_render_of_modern_electronic_compa_3f7c6d6b-186c-4b57-964d-2116f5a54322.png",
     "model": [
       "Midjourney"
     ],
     "category": "Product & Tech",
-    "description": "High-density motherboard component rendering with precision surface-mounted microchips."
+    "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
     "id": "017",
@@ -202,25 +193,23 @@ const PORTFOLIO_WORKS = [
   },
   {
     "id": "018",
-    "name": "Futuristic Transport Concept",
+    "name": "Female Explorer",
     "file": "images/FE_002.png",
     "model": [
-      "ChatGPT",
-      "ComfyUI"
+      "ChatGPT"
     ],
     "category": "Environments & Sci-Fi",
-    "description": "Sci-fi cinematic vehicle concept in an expansive futuristic landscape."
+    "description": "Sci-fi cinematic female explorer character in an expansive landscape."
   },
   {
     "id": "019",
-    "name": "Cyber Feline Companion",
+    "name": "Felline Feast - Cat Food Commercial",
     "file": "images/Kot_08_03_HI.png",
     "model": [
-      "NanoBanana",
-      "ComfyUI"
+      "ChatGPT"
     ],
     "category": "Creatures & Art",
-    "description": "High-resolution character art featuring a cybernetic cat created with custom ComfyUI workflow."
+    "description": "Photorealistic visualization for a cat food commercial."
   },
   {
     "id": "020",
@@ -234,34 +223,53 @@ const PORTFOLIO_WORKS = [
   },
   {
     "id": "021",
-    "name": "Studio Fashion Study - Black Tee",
+    "name": "Outdoor Fashion Study - Black Tee Mockup",
     "file": "images/Woman_black-T_001.png",
     "model": [
-      "ChatGPT"
+      "Midjourney"
     ],
     "category": "Characters & Fashion",
-    "description": "Studio portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
+    "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
   },
   {
     "id": "022",
-    "name": "Studio Fashion Study - Olive Tee",
+    "name": "Studio Fashion Study - Olive Tee Mockup",
     "file": "images/Woman_green-T_001.png",
     "model": [
-      "NanoBanana"
+      "Midjourney"
     ],
     "category": "Characters & Fashion",
-    "description": "Natural daylight portrait study capturing subtle facial expressions and garment drape."
+    "description": "Natural studio portrait study capturing subtle facial expressions and garment drape."
   },
   {
     "id": "023",
-    "name": "Studio Fashion Study - White Tee",
+    "name": "Studio Fashion Study - White Tee Mockup",
     "file": "images/Woman_white-T_001.png",
     "model": [
-      "ChatGPT",
-      "NanoBanana"
+      "Midjourney"
     ],
     "category": "Characters & Fashion",
     "description": "Clean minimalist studio portrait exploring photorealistic lighting and realistic micro-details."
+  },
+  {
+    "id": "024",
+    "name": "Captain Lizzard - Custom Character",
+    "file": "images/Captain_Lizzard.jpg",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Creatures & Art",
+    "description": "Photorealistic anthropomorphic lizzard character visualization."
+  },
+  {
+    "id": "025",
+    "name": "Mario Doom Slayer - Custom Character",
+    "file": "images/dosome3d_Mario_doom_guy_01.png",
+    "model": [
+      "ChatGPT"
+    ],
+    "category": "Creatures & Art",
+    "description": "Mario and Doom Slayer character crossover."
   }
 ];
 
