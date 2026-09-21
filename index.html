@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Generative Art & Imagery Portfolio | Works & Concepts</title>
+  <meta name="description" content="Portfolio of AI generated art, character designs, 3D miniatures, and photorealistic concept imagery created with Midjourney, ChatGPT, NanoBanana, and ComfyUI.">
+  <meta name="keywords" content="AI artist, generative AI, Midjourney, ChatGPT, NanoBanana, ComfyUI, AI portfolio, prompt engineer">
+
+  <!-- OpenGraph / Social Cards -->
+  <meta property="og:title" content="AI Generative Art & Imagery Portfolio">
+  <meta property="og:description" content="Explore AI generated concept art, 3D printable miniatures, and hardware visualizations with model pipeline breakdowns.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/3d_print_mini_0004.png">
+
+  <!-- Fonts: Outfit (modern sans) & JetBrains Mono (technical monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION HEADER
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container nav-content">
+      <a href="#" class="brand-wrapper" aria-label="Egor Baklykov - AI Art & Generative Imagery">
+        <div class="brand-avatar">
+          <img src="assets/EB_avatar_office.png" alt="Egor Baklykov" class="brand-avatar-img">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">Egor Baklykov</span>
+          <span class="brand-subtitle">AI Art &amp; Generative Imagery</span>
+        </div>
+      </a>
+
+      <nav class="nav-actions" aria-label="Portfolio Contact & Actions">
+        <button type="button" id="btnOpenEditor" class="btn btn-secondary admin-only" title="Edit artwork names, AI models, and categories (Owner Mode)">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          <span>Edit Metadata</span>
+        </button>
+
+        <a href="https://www.linkedin.com/in/egorbaklykov/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Connect on LinkedIn" aria-label="LinkedIn Profile">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.78c-.89 0-1.61.72-1.61 1.61s.72 1.61 1.61 1.61 1.61-.72 1.61-1.61-.72-1.61-1.61-1.61Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:jegor.baklykov@gmail.com" class="btn btn-primary" title="Send email to jegor.baklykov@gmail.com" aria-label="Send email to jegor.baklykov@gmail.com">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="email-btn-text-full">jegor.baklykov@gmail.com</span>
+          <span class="email-btn-text-short">Email</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       HERO INTRODUCTION
+       ====================================================================== -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <h1 class="hero-title">
+        <span class="gradient-text">Generative Imagery &amp; AI Art</span>
+      </h1>
+
+      <p class="hero-description">
+        A curated showcase of generative AI concepts, 3D miniatures, photorealistic hardware, and character studies. Each project details the AI models and generative pipelines utilized.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTROLS & FILTER TOOLBAR (Unified 2-Row Layout)
+       ====================================================================== -->
+  <section class="controls-panel" aria-label="Filters and Search">
+    <div class="container controls-grid">
+      <!-- Row 1: Search, Sort, Layout & Status Counter -->
+      <div class="controls-row-main">
+        <div class="search-wrapper">
+          <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input 
+            type="search" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search artworks, AI models, prompts..." 
+            autocomplete="off"
+            aria-label="Search portfolio"
+          >
+          <button type="button" id="searchClear" class="search-clear" title="Clear search">&times;</button>
+        </div>
+
+        <div class="view-tools">
+          <select id="sortSelect" class="sort-select" aria-label="Sort Artworks">
+            <option value="default">Default Order</option>
+            <option value="name-asc">Name (A &rarr; Z)</option>
+            <option value="name-desc">Name (Z &rarr; A)</option>
+            <option value="category">Category</option>
+          </select>
+
+          <div class="layout-toggle-group" role="group" aria-label="Grid layout toggle">
+            <button type="button" id="btnLayoutMasonry" class="layout-btn" title="Masonry Flow" aria-label="Masonry layout">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="11" rx="1.5"/><rect x="14" y="3" width="7" height="6" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="17" width="7" height="4" rx="1.5"/></svg>
+            </button>
+            <button type="button" id="btnLayoutGrid" class="layout-btn active" title="Uniform Grid" aria-label="Uniform grid layout">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </button>
+          </div>
+
+          <div class="results-status">
+            <span id="resultsCount">23 works</span>
+            <button type="button" id="resetFiltersBtn" class="reset-filters-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Unified Filter Chips for Category and AI Model -->
+      <div class="filter-row-unified">
+        <div class="filter-subgroup">
+          <span class="filter-label">Category:</span>
+          <div class="chip-list" id="catFilterList">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <div class="filter-divider" aria-hidden="true"></div>
+
+        <div class="filter-subgroup">
+          <span class="filter-label">AI Model:</span>
+          <div class="chip-list" id="modelFilterList">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       GALLERY DISPLAY
+       ====================================================================== -->
+  <main class="container gallery-container">
+    <div id="galleryGrid" class="gallery-grid layout-grid">
+      <!-- Art Cards dynamically injected by app.js -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state" role="status">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+      <h3>No matching artworks found</h3>
+      <p>Try adjusting your search keywords, clearing Category / AI Model filter chips, or resetting your filter criteria.</p>
+      <button type="button" class="btn btn-secondary" onclick="document.getElementById('resetFiltersBtn').click()">Reset Filters</button>
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       FULLSCREEN LIGHTBOX MODAL (<dialog>)
+       ====================================================================== -->
+  <dialog id="lightboxModal" class="lightbox-dialog" aria-labelledby="lightboxTitle" closedby="any">
+    <div class="lightbox-wrapper">
+      <!-- Main Image Stage -->
+      <div class="lightbox-stage">
+        <button type="button" id="lightboxPrev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous Artwork">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+
+        <div id="lightboxImgContainer" class="lightbox-img-container" title="Scroll wheel to zoom, drag to pan">
+          <img id="lightboxImg" class="lightbox-img" src="" alt="Artwork High Resolution View">
+        </div>
+
+        <button type="button" id="lightboxNext" class="lightbox-nav-btn lightbox-next" aria-label="Next Artwork">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Stage Zoom Bar -->
+        <div class="stage-controls">
+          <button type="button" id="zoomOutBtn" class="stage-btn" title="Zoom Out (-)">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <span id="zoomLevelText" class="zoom-level-text">100%</span>
+          <button type="button" id="zoomInBtn" class="stage-btn" title="Zoom In (+)">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <button type="button" id="zoomResetBtn" class="stage-btn" title="Reset Zoom (0)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detail Sidebar -->
+      <aside class="lightbox-sidebar">
+        <div class="sidebar-header">
+          <span id="lightboxCounter" class="item-counter">0 / 0</span>
+          <button type="button" id="lightboxClose" class="close-btn" aria-label="Close Lightbox">&times;</button>
+        </div>
+
+        <h2 id="lightboxTitle" class="sidebar-title">Artwork Title</h2>
+
+        <div class="specs-card">
+          <div class="spec-row">
+            <span class="spec-key">AI Model</span>
+            <div id="lightboxModel" class="art-badges-inline spec-val"></div>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Category</span>
+            <span id="lightboxCategory" class="spec-val">3D Miniatures</span>
+          </div>
+        </div>
+
+        <p id="lightboxDesc" class="sidebar-desc">
+          Artwork prompt and generative workflow details.
+        </p>
+
+        <div class="sidebar-actions">
+          <button type="button" id="lightboxEditBtn" class="btn btn-secondary admin-only">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+            Edit This Artwork
+          </button>
+        </div>
+      </aside>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       METADATA EDITOR / EXPORTER MODAL (<dialog>)
+       ====================================================================== -->
+  <dialog id="editorModal" class="editor-dialog" aria-labelledby="editorModalTitle" closedby="any">
+    <div class="editor-window">
+      <div class="editor-header">
+        <h3 id="editorModalTitle">
+          <svg width="20" height="20" fill="none" stroke="#38bdf8" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          Portfolio Metadata Inspector &amp; Authoring
+        </h3>
+        <button type="button" id="editorClose" class="close-btn" aria-label="Close Editor">&times;</button>
+      </div>
+
+      <div class="editor-tabs">
+        <button type="button" id="tabEditExisting" class="tab-btn active">Edit Existing Artwork</button>
+        <button type="button" id="tabAddNew" class="tab-btn">+ Add New Artwork</button>
+      </div>
+
+      <!-- Tab 1: Edit Existing -->
+      <div class="editor-body" id="panelEditExisting">
+        <div class="form-group">
+          <label for="selectWorkItem" class="form-label">Select Artwork to Edit</label>
+          <select id="selectWorkItem" class="form-control">
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+        <div class="editor-preview-card">
+          <img id="editorPreviewImg" src="" alt="Thumbnail Preview" class="editor-preview-img">
+          <div class="editor-preview-info">
+            <span id="editorPreviewTitle" class="editor-preview-title">Title</span>
+            <span id="editorPreviewFile" class="editor-preview-file">images/...</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="editFieldTitle" class="form-label">Artwork Title</label>
+          <input type="text" id="editFieldTitle" class="form-control" placeholder="Artwork project name...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">AI Models (Multi-Select)</label>
+          <div class="model-checkbox-grid" id="modelCheckboxGroup">
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="Midjourney"> Midjourney
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="ChatGPT"> ChatGPT
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="NanoBanana"> NanoBanana
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="ComfyUI"> ComfyUI
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="editFieldCategory" class="form-label">Category</label>
+          <select id="editFieldCategory" class="form-control">
+            <option value="3D Miniatures">3D Miniatures</option>
+            <option value="Product & Tech">Product & Tech</option>
+            <option value="Characters & Fashion">Characters & Fashion</option>
+            <option value="Environments & Sci-Fi">Environments & Sci-Fi</option>
+            <option value="Creatures & Art">Creatures & Art</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="editFieldDesc" class="form-label">Prompt &amp; Generative Details</label>
+          <textarea id="editFieldDesc" class="form-control" rows="3" placeholder="Prompt description, lighting style, and post-processing details..."></textarea>
+        </div>
+
+        <!-- Publishing to GitHub Pages Guide Banner -->
+        <div class="editor-guide-banner">
+          <div class="editor-guide-banner-title">
+            <svg width="16" height="16" fill="none" stroke="#38bdf8" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            How to publish your changes live to GitHub Pages:
+          </div>
+          Edits are auto-saved in your browser (localStorage). Because GitHub Pages is static, to make your changes visible to everyone worldwide:
+          <ol style="margin: 0.4rem 0 0 1.25rem; padding: 0;">
+            <li>Click <strong>Download works.js</strong> below (or <strong>Copy Code</strong>).</li>
+            <li>Replace the file <code>data/works.js</code> in your project repository with the downloaded file.</li>
+            <li>Commit &amp; push via Git (<code>git add data/works.js</code> &rarr; <code>git commit -m "Update metadata"</code> &rarr; <code>git push</code>).</li>
+            <li><em>Or use the <strong>Direct GitHub Sync</strong> below to commit directly with a GitHub token!</em></li>
+          </ol>
+        </div>
+
+        <!-- GitHub Direct Sync Accordion -->
+        <div class="sync-box">
+          <div class="sync-box-header" id="syncHeaderToggle">
+            <span style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Direct GitHub Sync (Publish to GitHub Pages)
+            </span>
+            <span class="sync-arrow" id="syncArrow">&darr;</span>
+          </div>
+
+          <div class="sync-box-body" id="syncBoxBody">
+            <p class="sync-hint">
+              Changes are saved in this browser via <strong>localStorage</strong> (they persist on page refresh). To publish them live for visitors worldwide on GitHub Pages, commit directly using a GitHub Personal Access Token below:
+            </p>
+            <div class="form-grid-2" style="margin-top: 0.75rem;">
+              <div>
+                <label for="ghRepoInput" class="form-label">GitHub Repository (owner/repo)</label>
+                <input type="text" id="ghRepoInput" class="form-control" placeholder="username/portfolio_ai">
+              </div>
+              <div>
+                <label for="ghBranchInput" class="form-label">Branch</label>
+                <input type="text" id="ghBranchInput" class="form-control" value="main">
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <label for="ghTokenInput" class="form-label">GitHub Personal Access Token (repo scope)</label>
+              <input type="password" id="ghTokenInput" class="form-control" placeholder="ghp_... (saved securely in your browser only)">
+            </div>
+            <div class="sync-button-row" style="margin-top: 1rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <button type="button" id="btnPushGitHub" class="btn btn-primary">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                Commit &amp; Push to GitHub
+              </button>
+              <span id="ghSyncStatus" class="sync-status" style="font-family: var(--font-mono); font-size: 0.8rem;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Add New Artwork -->
+      <div class="editor-body" id="panelAddNew" style="display: none;">
+        <div class="form-group">
+          <label for="newFieldFile" class="form-label">Image File Name (or path in /images)</label>
+          <input type="text" id="newFieldFile" class="form-control" placeholder="e.g. 3d_print_mini_0032.png or images/my_new_render.png">
+        </div>
+
+        <div id="newPreviewStrip" class="editor-preview-card" style="display: none;">
+          <img id="newPreviewImg" src="" alt="New Image Preview" class="editor-preview-img">
+          <div class="editor-preview-info">
+            <span id="newPreviewTitleText" class="editor-preview-title">New Artwork</span>
+            <span id="newPreviewPathText" class="editor-preview-file">images/...</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="newFieldTitle" class="form-label">Artwork Title</label>
+          <input type="text" id="newFieldTitle" class="form-control" placeholder="Auto-generated from filename or custom title...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">AI Models (Multi-Select)</label>
+          <div class="model-checkbox-grid" id="newModelCheckboxGroup">
+            <label class="model-checkbox-label is-checked">
+              <input type="checkbox" value="Midjourney" checked> Midjourney
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="ChatGPT"> ChatGPT
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="NanoBanana"> NanoBanana
+            </label>
+            <label class="model-checkbox-label">
+              <input type="checkbox" value="ComfyUI"> ComfyUI
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="newFieldCategory" class="form-label">Category</label>
+          <select id="newFieldCategory" class="form-control">
+            <option value="3D Miniatures">3D Miniatures</option>
+            <option value="Product & Tech">Product & Tech</option>
+            <option value="Characters & Fashion">Characters & Fashion</option>
+            <option value="Environments & Sci-Fi">Environments & Sci-Fi</option>
+            <option value="Creatures & Art" selected>Creatures & Art</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="newFieldDesc" class="form-label">Prompt &amp; Generative Details</label>
+          <textarea id="newFieldDesc" class="form-control" rows="3" placeholder="Prompt description, lighting style, and post-processing details..."></textarea>
+        </div>
+
+        <div style="margin-top: 0.5rem;">
+          <button type="button" id="btnSubmitNewWork" class="btn btn-primary">
+            + Add to Portfolio
+          </button>
+        </div>
+      </div>
+
+      <div class="editor-footer">
+        <div class="editor-footer-left">
+          <button type="button" id="btnSaveItem" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Save Changes
+          </button>
+          <button type="button" id="btnAddNewWork" class="btn btn-secondary">
+            + Add New Image
+          </button>
+          <button type="button" id="btnDeleteItem" class="btn btn-outline" style="color: #f87171; border-color: rgba(239, 68, 68, 0.4);" title="Delete this artwork from your portfolio">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Delete Artwork
+          </button>
+          <button type="button" id="btnResetDefaults" class="btn btn-outline" style="color: #94a3b8; border-color: var(--border-subtle);" title="Revert all local changes back to the original repository data">
+            Reset to Repo
+          </button>
+        </div>
+
+        <div class="editor-footer-right">
+          <button type="button" id="btnCopyJs" class="btn btn-outline" title="Copy updated works.js code to clipboard">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            Copy Code
+          </button>
+          <button type="button" id="btnDownloadJs" class="btn btn-secondary" title="Download updated works.js to replace data/works.js">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download works.js
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       OWNER AUTHENTICATION MODAL (<dialog>)
+       ====================================================================== -->
+  <dialog id="authModal" class="editor-dialog" aria-labelledby="authModalTitle" closedby="any">
+    <div class="editor-window" style="max-width: 440px; margin: auto;">
+      <div class="editor-header">
+        <h3 id="authModalTitle" style="font-size: 1.1rem;">
+          <svg width="18" height="18" fill="none" stroke="#38bdf8" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Owner Authentication
+        </h3>
+        <button type="button" id="authClose" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+
+      <form id="authForm" class="editor-body" style="gap: 1.25rem;">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          Enter the owner password to access editing and metadata management tools.
+        </p>
+
+        <div>
+          <label for="authPasswordInput" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="authPasswordInput" 
+            class="form-control" 
+            placeholder="Enter password..." 
+            autocomplete="current-password"
+            required
+          >
+          <div id="authErrorMsg" style="color: #f87171; font-size: 0.8rem; margin-top: 0.5rem; display: none;"></div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem; margin-top: 0.25rem;">
+          <button type="button" id="authCancelBtn" class="btn btn-secondary">Cancel</button>
+          <button type="submit" id="authSubmitBtn" class="btn btn-primary">Unlock</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Floating Back to Top Arrow Button -->
+  <button type="button" id="btnBackToTop" class="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-title">AI Generative Art &amp; Imagery Portfolio</span>
+        <span class="footer-note">Optimized for GitHub Pages &bull; Pure HTML5, CSS &amp; Vanilla JS (Zero Build)</span>
+      </div>
+
+      <div class="footer-links">
+        <button type="button" id="btnToggleAdmin" class="footer-link" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Owner Editor Access (Ctrl+Alt+E)">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>Owner Access</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/works.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/editor.js"></script>
+</body>
+</html>
