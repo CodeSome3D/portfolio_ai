@@ -4,7 +4,6 @@
  * Allowed AI Models: "Midjourney", "ChatGPT", "NanoBanana", "ComfyUI", "Claude", "MiniMax", "LTX"
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
- * Grid crop: optional "crop": "top" or "bottom" (on a work or a project) anchors the cropped thumbnail
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
  * Last updated: 2026-11-03
  */
@@ -251,6 +250,49 @@ window.PORTFOLIO_WORKS = [
   },
   {
     "id": "007",
+    "name": "AI Presentations",
+    "project": "ai-presentations",
+    "items": [
+      {
+        "youtube": "https://youtu.be/VKUtc0i7BdU",
+        "name": "AI ImaGen Presentation"
+      },
+      {
+        "youtube": "https://youtu.be/969X_M_rcRQ",
+        "name": "What Is Bitcoin?"
+      }
+    ],
+    "model": [
+      "Claude"
+    ],
+    "category": "Product & Tech",
+    "year": "2026",
+    "description": "AI assisted presentations"
+  },
+  {
+    "id": "008",
+    "name": "Felline Feast - Cat Food Commercial",
+    "model": [
+      "ChatGPT"
+    ],
+    "category": "Creatures & Art",
+    "year": "2026",
+    "description": "Photorealistic visualization for a cat food commercial.",
+    "project": "felline-feast-cat-food-commercial",
+    "items": [
+      {
+        "file": "images/art_cat-food-commercial_01.png"
+      },
+      {
+        "youtube": "https://youtu.be/6Leb6nrnXhg"
+      },
+      {
+        "youtube": "https://youtu.be/oS8o0c4IaMg"
+      }
+    ]
+  },
+  {
+    "id": "009",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -297,7 +339,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "008",
+    "id": "010",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -324,7 +366,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "009",
+    "id": "011",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -335,7 +377,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
-    "id": "010",
+    "id": "012",
     "name": "Custom Characters",
     "model": [
       "Midjourney",
@@ -394,7 +436,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "011",
+    "id": "013",
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/environment_coastal-lighthouse_01.jpg",
     "model": [
@@ -405,7 +447,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
   },
   {
-    "id": "012",
+    "id": "014",
     "name": "Lily of the Valley in Ceramic Vase",
     "file": "images/art_lily-of-the-valley_01.png",
     "model": [
@@ -416,7 +458,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Classical still-life painting of delicate lily of the valley blossoms in a rustic ceramic vase."
   },
   {
-    "id": "013",
+    "id": "015",
     "name": "Handheld Device - Concept 01",
     "file": "images/product_handheld-device_01.png",
     "model": [
@@ -427,7 +469,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "014",
+    "id": "016",
     "name": "Hadheld Device - Concept 02",
     "file": "images/product_handheld-device_02.png",
     "model": [
@@ -438,7 +480,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "015",
+    "id": "017",
     "name": "Compact Electronic Module",
     "file": "images/product_electronic-module_01.png",
     "model": [
@@ -447,16 +489,5 @@ window.PORTFOLIO_WORKS = [
     "category": "Product & Tech",
     "year": "",
     "description": "Sleek hardware module with matte dark anodized casing, LED indicators, and connection ports."
-  },
-  {
-    "id": "016",
-    "name": "Felline Feast - Cat Food Commercial",
-    "file": "images/art_cat-food-commercial_01.png",
-    "model": [
-      "ChatGPT"
-    ],
-    "category": "Creatures & Art",
-    "year": "",
-    "description": "Photorealistic visualization for a cat food commercial."
   }
 ];
