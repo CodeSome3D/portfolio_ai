@@ -5,12 +5,177 @@
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
- * Last updated: 2026-10-24
+ * Last updated: 2026-11-03
  */
 
 window.PORTFOLIO_WORKS = [
   {
     "id": "001",
+    "name": "Product Packshots - E-Commerce",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Product & Tech",
+    "year": "",
+    "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings.",
+    "project": "packshots-e-commerce",
+    "items": [
+      {
+        "file": "images/packshots/E-Commerce/analog-wristwatch.jpg",
+        "name": "Analog wristwatch"
+      },
+      {
+        "file": "images/packshots/E-Commerce/glass-perfume-bottle.jpg",
+        "name": "Glass perfume bottle"
+      },
+      {
+        "file": "images/packshots/E-Commerce/running-sneaker.jpg",
+        "name": "Running sneaker"
+      },
+      {
+        "file": "images/packshots/E-Commerce/skincare-serum-dropper-bottle.jpg",
+        "name": "Skincare serum dropper bottle"
+      },
+      {
+        "file": "images/packshots/E-Commerce/wireless-earbuds-charging-case.jpg",
+        "name": "Wireless earbuds charging case"
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "name": "Product Packshots - Web Hero Banners",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Product & Tech",
+    "year": "",
+    "description": "Wide hero banner product compositions for websites and landing pages.",
+    "project": "packshots-web-hero-banners",
+    "items": [
+      {
+        "file": "images/packshots/Web_Hero_Banners/espresso-machine.jpg",
+        "name": "Espresso machine"
+      },
+      {
+        "file": "images/packshots/Web_Hero_Banners/laptop-backpack.jpg",
+        "name": "Laptop backpack"
+      },
+      {
+        "file": "images/packshots/Web_Hero_Banners/olive-oil-bottle.jpg",
+        "name": "Olive oil bottle"
+      },
+      {
+        "file": "images/packshots/Web_Hero_Banners/over-ear-headphones.jpg",
+        "name": "Over-ear headphones"
+      },
+      {
+        "file": "images/packshots/Web_Hero_Banners/scented-candle-in-amber-jar.jpg",
+        "name": "Scented candle in amber jar"
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "name": "Product Packshots - Social Media",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Product & Tech",
+    "year": "",
+    "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes.",
+    "project": "packshots-social-media",
+    "items": [
+      {
+        "file": "images/packshots/Social_Media/energy-drink-can-splash.jpg",
+        "name": "Energy drink can - splash"
+      },
+      {
+        "file": "images/packshots/Social_Media/gaming-mouse-neon-and-particles.jpg",
+        "name": "Gaming mouse - neon and particles"
+      },
+      {
+        "file": "images/packshots/Social_Media/ice-cream-pint-melting-and-toppings.jpg",
+        "name": "Ice cream pint - melting and toppings"
+      },
+      {
+        "file": "images/packshots/Social_Media/lipstick-levitation.jpg",
+        "name": "Lipstick - levitation"
+      },
+      {
+        "file": "images/packshots/Social_Media/sunglasses-floating-with-color-shapes.jpg",
+        "name": "Sunglasses - floating with color shapes"
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "name": "Product Packshots - Packaging Mockups",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Product & Tech",
+    "year": "",
+    "description": "Packaging and product concept mockups visualized as photoreal studio renders.",
+    "project": "packshots-packaging-mockups",
+    "items": [
+      {
+        "file": "images/packshots/Packaging_Mockup/childrens-wooden-toy-box.jpg",
+        "name": "Children's wooden toy box"
+      },
+      {
+        "file": "images/packshots/Packaging_Mockup/craft-beer-can.jpg",
+        "name": "Craft beer can"
+      },
+      {
+        "file": "images/packshots/Packaging_Mockup/loose-leaf-tea-tin-and-box.jpg",
+        "name": "Loose-leaf tea tin and box"
+      },
+      {
+        "file": "images/packshots/Packaging_Mockup/plant-based-snack-pouch.jpg",
+        "name": "Plant-based snack pouch"
+      },
+      {
+        "file": "images/packshots/Packaging_Mockup/smart-speaker-product-concept.jpg",
+        "name": "Smart speaker product concept"
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "name": "Product Packshots - B2B Catalog",
+    "model": [
+      "NanoBanana"
+    ],
+    "category": "Product & Tech",
+    "year": "",
+    "description": "Clean catalog-style product packshots for B2B and industrial catalogs.",
+    "project": "packshots-b2b-catalog",
+    "items": [
+      {
+        "file": "images/packshots/Catalogs_B2B/cordless-drill.jpg",
+        "name": "Cordless drill"
+      },
+      {
+        "file": "images/packshots/Catalogs_B2B/ergonomic-office-chair.jpg",
+        "name": "Ergonomic office chair"
+      },
+      {
+        "file": "images/packshots/Catalogs_B2B/industrial-safety-helmet.jpg",
+        "name": "Industrial safety helmet"
+      },
+      {
+        "file": "images/packshots/Catalogs_B2B/kitchen-faucet.jpg",
+        "name": "Kitchen faucet"
+      },
+      {
+        "file": "images/packshots/Catalogs_B2B/wi-fi-router.jpg",
+        "name": "Wi-Fi router"
+      }
+    ]
+  },
+  {
+    "id": "006",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -57,7 +222,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "002",
+    "id": "007",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -84,7 +249,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "003",
+    "id": "008",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -95,7 +260,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
-    "id": "004",
+    "id": "009",
     "name": "Custom Characters",
     "model": [
       "Midjourney",
@@ -154,7 +319,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "005",
+    "id": "010",
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/environment_coastal-lighthouse_01.jpg",
     "model": [
@@ -165,7 +330,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
   },
   {
-    "id": "006",
+    "id": "011",
     "name": "Lily of the Valley in Ceramic Vase",
     "file": "images/art_lily-of-the-valley_01.png",
     "model": [
@@ -176,7 +341,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Classical still-life painting of delicate lily of the valley blossoms in a rustic ceramic vase."
   },
   {
-    "id": "007",
+    "id": "012",
     "name": "Handheld Device - Concept 01",
     "file": "images/product_handheld-device_01.png",
     "model": [
@@ -187,7 +352,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "008",
+    "id": "013",
     "name": "Hadheld Device - Concept 02",
     "file": "images/product_handheld-device_02.png",
     "model": [
@@ -198,7 +363,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "009",
+    "id": "014",
     "name": "Compact Electronic Module",
     "file": "images/product_electronic-module_01.png",
     "model": [
@@ -209,7 +374,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Sleek hardware module with matte dark anodized casing, LED indicators, and connection ports."
   },
   {
-    "id": "010",
+    "id": "015",
     "name": "Felline Feast - Cat Food Commercial",
     "file": "images/art_cat-food-commercial_01.png",
     "model": [
@@ -220,7 +385,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization for a cat food commercial."
   },
   {
-    "id": "011",
+    "id": "016",
     "name": "Outdoor Fashion Study - Black Tee Mockup",
     "file": "images/fashion_tee-mockup-black_01.png",
     "model": [
@@ -231,7 +396,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
   },
   {
-    "id": "012",
+    "id": "017",
     "name": "Studio Fashion Study - Olive Tee Mockup",
     "file": "images/fashion_tee-mockup-olive_01.png",
     "model": [
@@ -242,7 +407,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Natural studio portrait study capturing subtle facial expressions and garment drape."
   },
   {
-    "id": "013",
+    "id": "018",
     "name": "Studio Fashion Study - White Tee Mockup",
     "file": "images/fashion_tee-mockup-white_01.png",
     "model": [
