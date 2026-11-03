@@ -492,6 +492,7 @@
               alt="${escapeHtml(getAltText(item))}" 
               ${index < 2 ? 'fetchpriority="high"' : (index >= 4 ? 'loading="lazy"' : '')}
               decoding="async"
+              ${cropStyle(item)}
               onload="this.parentElement.classList.add('has-loaded')"
               onerror="if (this.dataset.full !== '1') { this.dataset.full = '1'; this.src = '${escapeHtml(fallback)}'; }"
             >
@@ -927,8 +928,12 @@
       }
     });
 
-    // Stop video playback however the dialog gets closed (Esc, light dismiss, close button)
-    elements.lightboxDialog.addEventListener('close', stopLightboxVideo);
+    // Stop video playback and unlock page scroll however the dialog gets closed
+    // (Esc, light dismiss, close button, or the phone's back gesture, which closes it natively)
+    elements.lightboxDialog.addEventListener('close', () => {
+      stopLightboxVideo();
+      document.body.style.overflow = '';
+    });
 
     // Light dismiss: click outside the wrapper to close
     elements.lightboxDialog.addEventListener('click', (e) => {
@@ -1155,6 +1160,11 @@
   }
 
   // Each project material becomes a card that carries the project's metadata
+  // Optional "crop": "top" | "bottom" on a work or project anchors the cropped grid thumbnail
+  function cropStyle(item) {
+    return ['top', 'bottom'].includes(item.crop) ? `style="object-position: center ${item.crop}"` : '';
+  }
+
   function getProjectEntries(project) {
     const { items, project: slug, ...meta } = project;
     // Each item may override the project's info (title, description, year, category, tools / models)
@@ -1218,6 +1228,8 @@
   }
 
   function syncProjectFromHash() {
+    // Back/Forward while the lightbox is open: close it too, so it doesn't stay over a different page
+    if (elements.lightboxDialog.open) closeLightbox();
     const match = location.hash.match(/^#project=(.+)$/);
     const slug = match ? decodeURIComponent(match[1]) : '';
     const project = slug ? state.works.find(w => isProject(w) && w.project === slug) : null;

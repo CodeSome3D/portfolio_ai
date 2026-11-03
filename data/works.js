@@ -4,6 +4,7 @@
  * Allowed AI Models: "Midjourney", "ChatGPT", "NanoBanana", "ComfyUI", "Claude", "MiniMax", "LTX"
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
+ * Grid crop: optional "crop": "top" or "bottom" (on a work or a project) anchors the cropped thumbnail
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
  * Last updated: 2026-11-03
  */
@@ -77,6 +78,80 @@ window.PORTFOLIO_WORKS = [
   },
   {
     "id": "003",
+    "name": "Product Packshots - Apparel",
+    "model": [
+      "NanoBanana",
+      "Midjourney"
+    ],
+    "category": "Characters & Fashion",
+    "year": "",
+    "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+    "project": "packshots-apparel",
+    "crop": "top",
+    "items": [
+      {
+        "file": "images/packshots/Apparel/african-man-black-t-shirt-urban-studio.jpg",
+        "name": "African man - black t-shirt - urban studio",
+        "model": [
+          "NanoBanana"
+        ]
+      },
+      {
+        "file": "images/packshots/Apparel/african-woman-crewneck-sweatshirt-autumn-park.jpg",
+        "name": "African woman - crewneck sweatshirt - autumn park",
+        "model": [
+          "NanoBanana"
+        ]
+      },
+      {
+        "file": "images/packshots/Apparel/caucasian-man-hoodie-lakeside-outdoors.jpg",
+        "name": "Caucasian man - hoodie - lakeside outdoors",
+        "model": [
+          "NanoBanana"
+        ]
+      },
+      {
+        "file": "images/packshots/Apparel/caucasian-woman-white-t-shirt-city-street.jpg",
+        "name": "Caucasian woman - white t-shirt - city street",
+        "model": [
+          "NanoBanana"
+        ]
+      },
+      {
+        "file": "images/packshots/Apparel/latina-woman-oversized-hoodie-cozy-apartment.jpg",
+        "name": "Latina woman - oversized hoodie - cozy apartment",
+        "model": [
+          "NanoBanana"
+        ]
+      },
+      {
+        "file": "images/fashion_tee-mockup-black_01.png",
+        "name": "Outdoor Fashion Study - Black Tee Mockup",
+        "model": [
+          "Midjourney"
+        ],
+        "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
+      },
+      {
+        "file": "images/fashion_tee-mockup-olive_01.png",
+        "name": "Studio Fashion Study - Olive Tee Mockup",
+        "model": [
+          "Midjourney"
+        ],
+        "description": "Natural studio portrait study capturing subtle facial expressions and garment drape."
+      },
+      {
+        "file": "images/fashion_tee-mockup-white_01.png",
+        "name": "Studio Fashion Study - White Tee Mockup",
+        "model": [
+          "Midjourney"
+        ],
+        "description": "Clean minimalist studio portrait exploring photorealistic lighting and realistic micro-details."
+      }
+    ]
+  },
+  {
+    "id": "004",
     "name": "Product Packshots - Social Media",
     "model": [
       "NanoBanana"
@@ -109,7 +184,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "004",
+    "id": "005",
     "name": "Product Packshots - Packaging Mockups",
     "model": [
       "NanoBanana"
@@ -142,7 +217,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "005",
+    "id": "006",
     "name": "Product Packshots - B2B Catalog",
     "model": [
       "NanoBanana"
@@ -175,7 +250,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "006",
+    "id": "007",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -222,7 +297,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "007",
+    "id": "008",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -249,7 +324,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "008",
+    "id": "009",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -260,7 +335,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
-    "id": "009",
+    "id": "010",
     "name": "Custom Characters",
     "model": [
       "Midjourney",
@@ -319,7 +394,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "010",
+    "id": "011",
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/environment_coastal-lighthouse_01.jpg",
     "model": [
@@ -330,7 +405,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
   },
   {
-    "id": "011",
+    "id": "012",
     "name": "Lily of the Valley in Ceramic Vase",
     "file": "images/art_lily-of-the-valley_01.png",
     "model": [
@@ -341,7 +416,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Classical still-life painting of delicate lily of the valley blossoms in a rustic ceramic vase."
   },
   {
-    "id": "012",
+    "id": "013",
     "name": "Handheld Device - Concept 01",
     "file": "images/product_handheld-device_01.png",
     "model": [
@@ -352,7 +427,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "013",
+    "id": "014",
     "name": "Hadheld Device - Concept 02",
     "file": "images/product_handheld-device_02.png",
     "model": [
@@ -363,7 +438,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "014",
+    "id": "015",
     "name": "Compact Electronic Module",
     "file": "images/product_electronic-module_01.png",
     "model": [
@@ -374,7 +449,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Sleek hardware module with matte dark anodized casing, LED indicators, and connection ports."
   },
   {
-    "id": "015",
+    "id": "016",
     "name": "Felline Feast - Cat Food Commercial",
     "file": "images/art_cat-food-commercial_01.png",
     "model": [
@@ -383,38 +458,5 @@ window.PORTFOLIO_WORKS = [
     "category": "Creatures & Art",
     "year": "",
     "description": "Photorealistic visualization for a cat food commercial."
-  },
-  {
-    "id": "016",
-    "name": "Outdoor Fashion Study - Black Tee Mockup",
-    "file": "images/fashion_tee-mockup-black_01.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Characters & Fashion",
-    "year": "",
-    "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
-  },
-  {
-    "id": "017",
-    "name": "Studio Fashion Study - Olive Tee Mockup",
-    "file": "images/fashion_tee-mockup-olive_01.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Characters & Fashion",
-    "year": "",
-    "description": "Natural studio portrait study capturing subtle facial expressions and garment drape."
-  },
-  {
-    "id": "018",
-    "name": "Studio Fashion Study - White Tee Mockup",
-    "file": "images/fashion_tee-mockup-white_01.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Characters & Fashion",
-    "year": "",
-    "description": "Clean minimalist studio portrait exploring photorealistic lighting and realistic micro-details."
   }
 ];

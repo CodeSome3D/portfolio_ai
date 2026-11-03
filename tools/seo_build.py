@@ -189,11 +189,12 @@ def static_cards(works):
         vid = youtube_id(cover(w))
         href = f"https://www.youtube.com/watch?v={vid}" if vid else cover(w)["file"]
         play = VIDEO_PLAY_ICON if vid else ""
+        crop = f' style="object-position: center {w["crop"]}"' if w.get("crop") in ("top", "bottom") else ""
         project = PROJECT_BADGE.format(count=len(w["items"])) if is_project(w) else ""
         cards.append(
             f'      <article class="art-card{" is-project" if project else ""}">'
             f'<a class="art-media-wrap has-loaded" href="{e(href)}">'
-            f'<img class="art-img" src="{e(card_image(w))}" alt="{e(alt_text(w))}" {loading} decoding="async">{play}{project}</a>'
+            f'<img class="art-img" src="{e(card_image(w))}" alt="{e(alt_text(w))}" {loading} decoding="async"{crop}>{play}{project}</a>'
             f'<div class="art-details"><div class="art-header"><h3 class="art-title">{e(w.get("name") or "")}</h3>{year}</div>'
             f'<div class="art-meta-row"><span class="art-category">{e(w.get("category") or "")}</span>'
             f'<div class="art-badges-inline">{badges}</div></div>'
