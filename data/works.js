@@ -5,12 +5,52 @@
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
- * Last updated: 2026-11-03
+ * Last updated: 2026-11-04
  */
 
 window.PORTFOLIO_WORKS = [
   {
     "id": "001",
+    "name": "Nara AI Character",
+    "project": "nara-ai-character",
+    "items": [
+      {
+        "file": "images/character-nara/01-nara-character-sheet.jpg",
+        "name": "Nara Character sheet 01"
+      },
+      {
+        "file": "images/character-nara/02-nara-character-sheet-bikini.jpg",
+        "name": "Nara Character sheet 02"
+      },
+      {
+        "file": "images/character-nara/03-nara_in_caffe_001.jpg",
+        "name": "Nara in caffee with the book 01"
+      },
+      {
+        "file": "images/character-nara/04-nara_in_caffe_002.jpg",
+        "name": "Nara in caffee with the book 01"
+      },
+      {
+        "file": "images/character-nara/05-nara_in_caffe_003.jpg",
+        "name": "Nara in caffee with the book 01"
+      },
+      {
+        "youtube": "https://youtu.be/R0uyCV0Tqb8",
+        "name": "Nara book review"
+      }
+    ],
+    "model": [
+      "NanoBanana",
+      "ComfyUI",
+      "Claude",
+      "MiniMax"
+    ],
+    "category": "Characters & Fashion",
+    "year": "2026",
+    "description": ""
+  },
+  {
+    "id": "002",
     "name": "Product Packshots - E-Commerce",
     "model": [
       "NanoBanana"
@@ -43,7 +83,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "002",
+    "id": "003",
     "name": "Product Packshots - Web Hero Banners",
     "model": [
       "NanoBanana"
@@ -76,7 +116,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "003",
+    "id": "004",
     "name": "Product Packshots - Apparel",
     "model": [
       "NanoBanana",
@@ -150,7 +190,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "004",
+    "id": "005",
     "name": "Product Packshots - Social Media",
     "model": [
       "NanoBanana"
@@ -183,7 +223,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "005",
+    "id": "006",
     "name": "Product Packshots - Packaging Mockups",
     "model": [
       "NanoBanana"
@@ -216,7 +256,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "006",
+    "id": "007",
     "name": "Product Packshots - B2B Catalog",
     "model": [
       "NanoBanana"
@@ -249,7 +289,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "007",
+    "id": "008",
     "name": "AI Presentations",
     "project": "ai-presentations",
     "items": [
@@ -270,7 +310,7 @@ window.PORTFOLIO_WORKS = [
     "description": "AI assisted presentations"
   },
   {
-    "id": "008",
+    "id": "009",
     "name": "Felline Feast - Cat Food Commercial",
     "model": [
       "ChatGPT"
@@ -292,7 +332,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "009",
+    "id": "010",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -339,7 +379,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "010",
+    "id": "011",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -366,7 +406,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "011",
+    "id": "012",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -377,7 +417,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
-    "id": "012",
+    "id": "013",
     "name": "Custom Characters",
     "model": [
       "Midjourney",
@@ -436,7 +476,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "013",
+    "id": "014",
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/environment_coastal-lighthouse_01.jpg",
     "model": [
@@ -447,7 +487,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
   },
   {
-    "id": "014",
+    "id": "015",
     "name": "Lily of the Valley in Ceramic Vase",
     "file": "images/art_lily-of-the-valley_01.png",
     "model": [
@@ -458,7 +498,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Classical still-life painting of delicate lily of the valley blossoms in a rustic ceramic vase."
   },
   {
-    "id": "015",
+    "id": "016",
     "name": "Handheld Device - Concept 01",
     "file": "images/product_handheld-device_01.png",
     "model": [
@@ -469,7 +509,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "016",
+    "id": "017",
     "name": "Hadheld Device - Concept 02",
     "file": "images/product_handheld-device_02.png",
     "model": [
@@ -480,7 +520,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Photorealistic visualization of an electronic hadheld device."
   },
   {
-    "id": "017",
+    "id": "018",
     "name": "Compact Electronic Module",
     "file": "images/product_electronic-module_01.png",
     "model": [

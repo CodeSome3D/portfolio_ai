@@ -2590,3 +2590,22 @@ a.art-media-wrap {
     bottom: 0.75rem;
   }
 }
+
+/* Tag lists (lightbox details and cards) wrap onto extra lines instead of running past the frame */
+.art-badges-inline {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
+}
+.art-badges-inline > span {
+  white-space: nowrap;
+}
+.spec-key {
+  flex-shrink: 0;
+}
+.spec-val {
+  min-width: 0;
+}
+.lightbox-sidebar {
+  overflow-x: hidden;
+}
