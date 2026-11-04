@@ -15,23 +15,23 @@ window.PORTFOLIO_WORKS = [
     "project": "nara-ai-character",
     "items": [
       {
-        "file": "images/character-nara/01-nara-character-sheet.jpg",
+        "file": "images/images\\character-nara\\01-nara-character-sheet.jpg",
         "name": "Nara Character sheet 01"
       },
       {
-        "file": "images/character-nara/02-nara-character-sheet-bikini.jpg",
+        "file": "images/images\\character-nara\\02-nara-character-sheet-bikini.jpg",
         "name": "Nara Character sheet 02"
       },
       {
-        "file": "images/character-nara/03-nara_in_caffe_001.jpg",
+        "file": "images/images\\character-nara\\03-nara_in_caffe_001.jpg",
         "name": "Nara in caffee with the book 01"
       },
       {
-        "file": "images/character-nara/04-nara_in_caffe_002.jpg",
+        "file": "images/images\\character-nara\\04-nara_in_caffe_002.jpg",
         "name": "Nara in caffee with the book 01"
       },
       {
-        "file": "images/character-nara/05-nara_in_caffe_003.jpg",
+        "file": "images/images\\character-nara\\05-nara_in_caffe_003.jpg",
         "name": "Nara in caffee with the book 01"
       },
       {
