@@ -5,7 +5,7 @@
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
- * Last updated: 2026-11-04
+ * Last updated: 2026-11-13
  */
 
 window.PORTFOLIO_WORKS = [
@@ -496,38 +496,5 @@ window.PORTFOLIO_WORKS = [
     "category": "Creatures & Art",
     "year": "",
     "description": "Classical still-life painting of delicate lily of the valley blossoms in a rustic ceramic vase."
-  },
-  {
-    "id": "016",
-    "name": "Handheld Device - Concept 01",
-    "file": "images/product_handheld-device_01.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Photorealistic visualization of an electronic hadheld device."
-  },
-  {
-    "id": "017",
-    "name": "Hadheld Device - Concept 02",
-    "file": "images/product_handheld-device_02.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Photorealistic visualization of an electronic hadheld device."
-  },
-  {
-    "id": "018",
-    "name": "Compact Electronic Module",
-    "file": "images/product_electronic-module_01.png",
-    "model": [
-      "Midjourney"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Sleek hardware module with matte dark anodized casing, LED indicators, and connection ports."
   }
 ];
