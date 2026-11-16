@@ -41,7 +41,7 @@ body::before, body::after { display: none; }
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
-.brand-avatar { border: 0; box-shadow: none; filter: grayscale(0.25); }
+.brand-avatar { border: 0; box-shadow: none; }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 600;
