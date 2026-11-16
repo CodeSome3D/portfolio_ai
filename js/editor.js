@@ -86,6 +86,9 @@
   const ghRepoInput = document.getElementById('ghRepoInput');
   const ghBranchInput = document.getElementById('ghBranchInput');
   const ghTokenInput = document.getElementById('ghTokenInput');
+  const ghRememberToken = document.getElementById('ghRememberToken');
+  // GitHub token: kept for this browser tab (sessionStorage) unless "Remember on this device" is ticked (localStorage)
+  const TOKEN_KEY = GH_KEY + 'token';
   const btnPushGitHub = document.getElementById('btnPushGitHub');
   const ghSyncStatus = document.getElementById('ghSyncStatus');
 
@@ -130,7 +133,10 @@
     if (!ghRepoInput) return;
 
     const storedRepo = localStorage.getItem(GH_KEY + 'repo');
-    const storedToken = localStorage.getItem(GH_KEY + 'token');
+    const rememberedToken = localStorage.getItem(TOKEN_KEY);
+    const storedToken = sessionStorage.getItem(TOKEN_KEY) || rememberedToken;
+    // A token saved by an older version (always in localStorage) shows up as "remembered"; untick to forget it
+    if (ghRememberToken) ghRememberToken.checked = Boolean(rememberedToken);
     const storedBranch = localStorage.getItem(GH_KEY + 'branch');
 
     if (storedRepo) ghRepoInput.value = storedRepo;
@@ -566,7 +572,9 @@ window.PORTFOLIO_WORKS = ${JSON.stringify(window.PORTFOLIO_WORKS, null, 2)};
 
     // Store in localStorage for future convenience
     localStorage.setItem(GH_KEY + 'repo', repo);
-    localStorage.setItem(GH_KEY + 'token', token);
+    sessionStorage.setItem(TOKEN_KEY, token);
+    if (ghRememberToken && ghRememberToken.checked) localStorage.setItem(TOKEN_KEY, token);
+    else localStorage.removeItem(TOKEN_KEY);
     localStorage.setItem(GH_KEY + 'branch', branch);
 
     if (ghSyncStatus) {
@@ -1283,6 +1291,18 @@ window.PORTFOLIO_WORKS = ${JSON.stringify(window.PORTFOLIO_WORKS, null, 2)};
         const cb = e.target.closest('input[type="checkbox"]');
         if (cb) {
           cb.closest('.dcc-checkbox-label').classList.toggle('is-checked', cb.checked);
+        }
+      });
+    }
+
+    // Unticking "Remember on this device" forgets a saved token right away (it stays for this tab)
+    if (ghRememberToken) {
+      ghRememberToken.addEventListener('change', () => {
+        if (ghRememberToken.checked) {
+          const token = ghTokenInput ? ghTokenInput.value.trim() : '';
+          if (token) localStorage.setItem(TOKEN_KEY, token);
+        } else {
+          localStorage.removeItem(TOKEN_KEY);
         }
       });
     }
