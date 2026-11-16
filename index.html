@@ -950,7 +950,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=20261116a">
-  <link rel="stylesheet" href="css/studio.css?v=20261116a">
+  <link rel="stylesheet" href="css/studio.css?v=20261116b">
 </head>
 <body>
   <a class="skip-link" href="#workStart">Skip to work</a>
@@ -1715,6 +1715,9 @@
   <!-- Toast Notification Container -->
   <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
+  <!-- "Email address copied" chip, shown when an email link is clicked (app.js) -->
+  <div id="copyChip" class="copy-chip" role="status" aria-live="polite"></div>
+
   <!-- Floating Back to Top Arrow Button -->
   <!-- Phones: filters bottom sheet (the search box and chip rows are moved in here on small screens) -->
   <dialog id="filterSheet" class="filter-sheet" aria-labelledby="filterSheetTitle">
@@ -1748,18 +1751,12 @@
         <span class="footer-note">AI concept art, 3D miniatures, product and character imagery made with Midjourney, ChatGPT, NanoBanana and ComfyUI. &copy; 2026 Egor Baklykov</span>
       </div>
 
-      <div class="footer-links">
-        <button type="button" id="btnToggleAdmin" class="footer-link" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Owner Editor Access (Ctrl+Alt+E)">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          <span>Owner Access</span>
-        </button>
-      </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="data/works.js?v=20261116a"></script>
-  <script src="js/app.js?v=20261116a"></script>
+  <script src="js/app.js?v=20261116b"></script>
   <script src="js/editor.js?v=20261116a"></script>
 </body>
 </html>
