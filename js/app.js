@@ -92,6 +92,8 @@
     sortBy: 'default',
     layout: 'grid',
     currentLightboxIndex: -1,
+    lightboxList: [],      // what the lightbox steps through (gallery list or one project's items)
+    lightboxProject: null, // { project, galleryList, galleryIndex } while stepping through a project in the lightbox
     zoomLevel: 1,
     panOffset: { x: 0, y: 0 },
     isDragging: false,
@@ -160,6 +162,9 @@
     lightboxYear: document.getElementById('lightboxYear'),
     lightboxDesc: document.getElementById('lightboxDesc'),
     lightboxEditBtn: document.getElementById('lightboxEditBtn'),
+    lightboxSeeProject: document.getElementById('lightboxSeeProject'),
+    lightboxBackToAll: document.getElementById('lightboxBackToAll'),
+    lightboxContext: document.getElementById('lightboxContext'),
     zoomInBtn: document.getElementById('zoomInBtn'),
     zoomOutBtn: document.getElementById('zoomOutBtn'),
     zoomResetBtn: document.getElementById('zoomResetBtn'),
@@ -690,16 +695,39 @@
   }
 
   // --- LIGHTBOX CONTROLLER ---
-  function openLightbox(index) {
-    if (index < 0 || index >= state.displayList.length) return;
+  // The lightbox walks through its own list: the shown gallery, or (project mode) one project's images and videos.
+  // Project mode: "See the whole project" on a project cover; Next after the last item continues with the next work,
+  // Previous before the first item returns to the project's cover, "Back to all works" returns to the cover at once.
+  function openLightbox(index, list = state.displayList) {
+    if (index < 0 || index >= list.length) return;
 
+    state.lightboxList = list;
     state.currentLightboxIndex = index;
     resetZoom();
 
-    const item = state.displayList[index];
-    updateLightboxContent(item);
+    updateLightboxContent(list[index]);
 
     if (!elements.lightboxDialog.open) elements.lightboxDialog.showModal();
+  }
+
+  function enterLightboxProject() {
+    const project = state.lightboxList[state.currentLightboxIndex];
+    if (!isProject(project) || state.lightboxProject) return;
+    state.lightboxProject = { project, galleryList: state.lightboxList, galleryIndex: state.currentLightboxIndex };
+    openLightbox(0, getProjectEntries(project));
+    if (elements.lightboxNext) elements.lightboxNext.focus();
+  }
+
+  // offset 0: back to the project's cover; +1: the work after the project
+  function exitLightboxProject(offset = 0, focusBack = true) {
+    const mode = state.lightboxProject;
+    if (!mode) return;
+    state.lightboxProject = null;
+    const total = mode.galleryList.length;
+    openLightbox((mode.galleryIndex + offset + total) % total, mode.galleryList);
+    if (focusBack && offset === 0 && elements.lightboxSeeProject && !elements.lightboxSeeProject.hidden) {
+      elements.lightboxSeeProject.focus();
+    }
   }
 
   function closeLightbox() {
@@ -728,8 +756,20 @@
       elements.lightboxImg.src = media.file;
     }
     elements.lightboxImg.alt = getAltText(media);
-    elements.lightboxCounter.textContent = `${state.currentLightboxIndex + 1} / ${state.displayList.length}`;
+    elements.lightboxCounter.textContent = `${state.currentLightboxIndex + 1} / ${state.lightboxList.length}`;
     elements.lightboxTitle.textContent = (item.name || 'Untitled Artwork') + (isProject(item) ? ` (Project · ${item.items.length})` : '');
+
+    // Project cover in the gallery sequence: offer the whole project; inside a project: the way back
+    const inProject = Boolean(state.lightboxProject);
+    if (elements.lightboxSeeProject) {
+      elements.lightboxSeeProject.hidden = inProject || !isProject(item);
+      if (isProject(item)) elements.lightboxSeeProject.textContent = `See the whole project (${item.items.length} ${item.items.length === 1 ? 'item' : 'items'})`;
+    }
+    if (elements.lightboxBackToAll) elements.lightboxBackToAll.hidden = !inProject;
+    if (elements.lightboxContext) {
+      elements.lightboxContext.hidden = !inProject;
+      if (inProject) elements.lightboxContext.textContent = `Project: ${state.lightboxProject.project.name || ''}`;
+    }
 
     // AI model badges (multiple supported)
     elements.lightboxModel.innerHTML = getModelList(item).map(m =>
@@ -742,14 +782,22 @@
   }
 
   function navigateLightbox(direction) {
-    const total = state.displayList.length;
-    if (total <= 1) return;
-
+    const list = state.lightboxList;
+    const total = list.length;
     let newIndex = state.currentLightboxIndex + direction;
+
+    if (state.lightboxProject) {
+      // Leaving the project at either end continues the gallery sequence
+      if (newIndex >= total) return exitLightboxProject(1, false);
+      if (newIndex < 0) return exitLightboxProject(0, false);
+      return openLightbox(newIndex, list);
+    }
+
+    if (total <= 1) return;
     if (newIndex < 0) newIndex = total - 1;
     if (newIndex >= total) newIndex = 0;
 
-    openLightbox(newIndex);
+    openLightbox(newIndex, list);
   }
 
   function stopLightboxVideo() {
@@ -930,7 +978,10 @@
     elements.lightboxDialog.addEventListener('close', () => {
       stopLightboxVideo();
       document.body.style.overflow = '';
+      state.lightboxProject = null;
     });
+    if (elements.lightboxSeeProject) elements.lightboxSeeProject.addEventListener('click', enterLightboxProject);
+    if (elements.lightboxBackToAll) elements.lightboxBackToAll.addEventListener('click', () => exitLightboxProject(0));
 
     // Light dismiss: click outside the wrapper to close
     elements.lightboxDialog.addEventListener('click', (e) => {
@@ -999,7 +1050,7 @@
 
     // Lightbox Edit Shortcut
     elements.lightboxEditBtn.addEventListener('click', () => {
-      const currentItem = state.displayList[state.currentLightboxIndex];
+      const currentItem = state.lightboxList[state.currentLightboxIndex];
       closeLightbox();
       if (window.PORTFOLIO_EDITOR && window.PORTFOLIO_EDITOR.openWithItem) {
         window.PORTFOLIO_EDITOR.openWithItem(currentItem._project || currentItem, currentItem._itemIndex);

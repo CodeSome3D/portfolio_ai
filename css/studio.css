@@ -405,3 +405,20 @@ dialog.filter-sheet::backdrop { background: transparent; }
     transition-delay: 0s !important;
   }
 }
+
+/* Lightbox: "See the whole project" / "Back to all works" (project mode) */
+.lightbox-context {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: -0.35rem;
+}
+.lightbox-project-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.lightbox-project-actions:not(:has(button:not([hidden]))) { display: none; }
+.lightbox-project-btn { padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 500; }
+.lightbox-project-btn[hidden] { display: none; }
+.lightbox-project-btn.btn-outline { border: 1px solid var(--border-subtle); color: var(--text-primary); background: none; }
+.lightbox-project-btn.btn-outline:hover { border-color: var(--accent); }
+.lightbox-project-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

@@ -1189,11 +1189,18 @@
       <!-- Detail Sidebar -->
       <aside class="lightbox-sidebar">
         <div class="sidebar-header">
-          <span id="lightboxCounter" class="item-counter">0 / 0</span>
+          <span id="lightboxCounter" class="item-counter" aria-live="polite">0 / 0</span>
           <button type="button" id="lightboxClose" class="close-btn" aria-label="Close Lightbox">✕</button>
         </div>
 
+        <p id="lightboxContext" class="lightbox-context" hidden></p>
         <h2 id="lightboxTitle" class="sidebar-title">Artwork Title</h2>
+
+        <!-- Project in the gallery sequence: step through all its images / videos, then back -->
+        <div class="lightbox-project-actions">
+          <button type="button" id="lightboxSeeProject" class="btn btn-primary lightbox-project-btn" hidden>See the whole project</button>
+          <button type="button" id="lightboxBackToAll" class="btn btn-outline lightbox-project-btn" hidden>Back to all works</button>
+        </div>
 
         <div class="specs-card">
           <div class="spec-row">
