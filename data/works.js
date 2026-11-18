@@ -5,7 +5,7 @@
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
- * Last updated: 2026-11-13
+ * Last updated: 2026-11-18
  */
 
 window.PORTFOLIO_WORKS = [
@@ -438,6 +438,10 @@ window.PORTFOLIO_WORKS = [
         "model": [
           "Midjourney"
         ]
+      },
+      {
+        "youtube": "https://youtu.be/E64jBLGlYHY",
+        "name": "Female Explorer Animation"
       },
       {
         "file": "images/art_mr-fox-mascot_01.png",
