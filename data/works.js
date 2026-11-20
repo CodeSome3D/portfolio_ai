@@ -1,7 +1,7 @@
 /**
  * AI PORTFOLIO WORKS DATA
  * ----------------------------------------------------
- * Allowed AI Models: "Midjourney", "ChatGPT", "NanoBanana", "ComfyUI", "Claude", "MiniMax", "LTX"
+ * Allowed AI Models: "Midjourney", "ChatGPT", "NanoBanana", "ComfyUI", "Claude", "MiniMax", "LTX", "Veo", "Omni Flash"
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)

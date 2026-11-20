@@ -9,7 +9,7 @@ A modern, high-aesthetic portfolio web application for AI artists, concept desig
 ## ✨ Features
 
 - **Custom Metadata Per Image**:
-  - **AI Models** (multi-select supported!): *Midjourney*, *ChatGPT*, *NanoBanana*, *ComfyUI*, *Claude*, *MiniMax*, *LTX* (color-coded badges).
+  - **AI Models** (multi-select supported!): *Midjourney*, *ChatGPT*, *NanoBanana*, *ComfyUI*, *Claude*, *MiniMax*, *LTX*, *Veo*, *Omni Flash* (color-coded badges).
   - **Category**: *3D Miniatures*, *Product & Tech*, *Characters & Fashion*, *Environments & Sci-Fi*, *Creatures & Art*.
   - **Year** (optional) **& Description**.
 - **YouTube Videos as Artworks**: paste a YouTube link in the editor and the work shows up with a play button and an embedded player in the lightbox.
@@ -83,7 +83,7 @@ Choose either option:
   "id": "001",
   "name": "3D Print Miniature - Cyber Paladin",
   "file": "images/miniature_cyber-paladin_01.png",
-  "model": ["Midjourney"],        // one or more of: Midjourney, ChatGPT, NanoBanana, ComfyUI, Claude, MiniMax, LTX
+  "model": ["Midjourney"],        // one or more of: Midjourney, ChatGPT, NanoBanana, ComfyUI, Claude, MiniMax, LTX, Veo, Omni Flash
   "category": "3D Miniatures",
   "year": "",                     // optional
   "description": "..."

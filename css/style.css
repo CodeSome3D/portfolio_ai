@@ -17,6 +17,10 @@
   --model-minimax-bg: rgba(129, 140, 248, 0.18);
   --model-ltx: #a3e635;
   --model-ltx-bg: rgba(163, 230, 53, 0.16);
+  --model-veo: #38bdf8;
+  --model-veo-bg: rgba(56, 189, 248, 0.16);
+  --model-omniflash: #e879f9;
+  --model-omniflash-bg: rgba(232, 121, 249, 0.16);
   /* Color Palette */
   --bg-deep: #07080b;
   --bg-main: #0b0d13;
@@ -1198,6 +1202,18 @@ body.is-admin .admin-only {
   background: var(--model-ltx-bg);
   color: var(--model-ltx);
   border-color: rgba(163, 230, 53, 0.35);
+}
+
+.badge-model[data-model*="Veo"] {
+  background: var(--model-veo-bg);
+  color: var(--model-veo);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.badge-model[data-model*="Omni Flash"] {
+  background: var(--model-omniflash-bg);
+  color: var(--model-omniflash);
+  border-color: rgba(232, 121, 249, 0.35);
 }
 
 /* Merge into project (editor Reorder tab) */

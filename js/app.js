@@ -10,7 +10,7 @@
 
   // Allowed Filter Values requested by artist
   const ALLOWED_CATEGORIES = ['3D Miniatures', 'Product & Tech', 'Characters & Fashion', 'Environments & Sci-Fi', 'Creatures & Art'];
-  const ALLOWED_MODELS = ['Midjourney', 'ChatGPT', 'NanoBanana', 'ComfyUI', 'Claude', 'MiniMax', 'LTX'];
+  const ALLOWED_MODELS = ['Midjourney', 'ChatGPT', 'NanoBanana', 'ComfyUI', 'Claude', 'MiniMax', 'LTX', 'Veo', 'Omni Flash'];
 
   // Own storage key: this site shares the codesome3d.github.io origin (and localStorage) with the 3D portfolio
   const STORAGE_KEY = 'portfolio_ai_saved_works';
@@ -457,7 +457,7 @@
       `;
     }
 
-    // Fixed allowed AI models: Midjourney, ChatGPT, NanoBanana, ComfyUI, Claude, MiniMax, LTX
+    // Fixed allowed AI models: Midjourney, ChatGPT, NanoBanana, ComfyUI, Claude, MiniMax, LTX, Veo, Omni Flash
     elements.modelFilterList.innerHTML = `
       <button type="button" class="chip active" data-model="all">All</button>
       ${ALLOWED_MODELS.map(m => `<button type="button" class="chip" data-model="${escapeHtml(m)}">${escapeHtml(m)}</button>`).join('')}
