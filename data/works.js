@@ -74,7 +74,12 @@ window.PORTFOLIO_WORKS = [
       },
       {
         "youtube": "https://youtu.be/E64jBLGlYHY",
-        "name": "Female Explorer Animation"
+        "name": "Female Explorer Animation",
+        "model": [
+          "Midjourney",
+          "Claude",
+          "Omni Flash"
+        ]
       },
       {
         "file": "images/art_mr-fox-mascot_01.png",
@@ -113,7 +118,12 @@ window.PORTFOLIO_WORKS = [
       },
       {
         "youtube": "https://youtu.be/62zHr7l0_ng",
-        "name": "Do you want a pint, mate?"
+        "name": "Do you want a pint, mate?",
+        "model": [
+          "Midjourney",
+          "Claude",
+          "Omni Flash"
+        ]
       }
     ]
   },
