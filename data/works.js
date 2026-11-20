@@ -5,7 +5,7 @@
  * Allowed Categories: "3D Miniatures", "Product & Tech", "Characters & Fashion", "Environments & Sci-Fi", "Creatures & Art"
  * YouTube videos: add "youtube": "https://youtu.be/VIDEO_ID" ("file" is then an optional poster image)
  * Projects: "project": "url-slug" + "items": [{ "file": ... } or { "youtube": ... }, ...] (2+ items, first = cover)
- * Last updated: 2026-11-18
+ * Last updated: 2026-11-20
  */
 
 window.PORTFOLIO_WORKS = [
@@ -51,6 +51,73 @@ window.PORTFOLIO_WORKS = [
   },
   {
     "id": "002",
+    "name": "Custom Characters",
+    "model": [
+      "Midjourney",
+      "ChatGPT",
+      "NanoBanana",
+      "Claude"
+    ],
+    "category": "Creatures & Art",
+    "year": "",
+    "description": "Characters tailored for the specific needs",
+    "project": "custom-characters",
+    "items": [
+      {
+        "file": "images/environment_female-explorer_01.png",
+        "name": "Female Explorer",
+        "description": "Sci-fi cinematic female explorer character in an expansive landscape.",
+        "category": "Environments & Sci-Fi",
+        "model": [
+          "Midjourney"
+        ]
+      },
+      {
+        "youtube": "https://youtu.be/E64jBLGlYHY",
+        "name": "Female Explorer Animation"
+      },
+      {
+        "file": "images/art_mr-fox-mascot_01.png",
+        "name": "Mr. Fox Gentleman Mascot",
+        "description": "Sophisticated fox character illustration in tailored vintage gentleman attire.",
+        "model": [
+          "Midjourney",
+          "ChatGPT"
+        ]
+      },
+      {
+        "file": "images/art_captain-lizzard_01.jpg",
+        "name": "Captain Lizzard",
+        "description": "Photorealistic anthropomorphic lizzard character visualization.",
+        "model": [
+          "NanoBanana",
+          "Claude"
+        ]
+      },
+      {
+        "file": "images/art_mario-doom-slayer_01.png",
+        "name": "Mario Doom Slayer",
+        "description": "Mario and Doom Slayer character crossover.",
+        "model": [
+          "ChatGPT"
+        ]
+      },
+      {
+        "file": "images/art_fox-biker-squad_01.png",
+        "name": "Fox Biker Squad",
+        "model": [
+          "Midjourney"
+        ],
+        "description": "Whimsical illustration of anthropomorphic fox bikers dressed in vintage leather motorcycle jackets."
+      },
+      {
+        "youtube": "https://youtu.be/62zHr7l0_ng",
+        "name": "Do you want a pint, mate?"
+      }
+    ]
+  },
+  {
+    "id": "003",
     "name": "Product Packshots - E-Commerce",
     "model": [
       "NanoBanana"
@@ -83,7 +150,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "003",
+    "id": "004",
     "name": "Product Packshots - Web Hero Banners",
     "model": [
       "NanoBanana"
@@ -116,7 +183,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "004",
+    "id": "005",
     "name": "Product Packshots - Apparel",
     "model": [
       "NanoBanana",
@@ -190,7 +257,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "005",
+    "id": "006",
     "name": "Product Packshots - Social Media",
     "model": [
       "NanoBanana"
@@ -223,7 +290,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "006",
+    "id": "007",
     "name": "Product Packshots - Packaging Mockups",
     "model": [
       "NanoBanana"
@@ -256,7 +323,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "007",
+    "id": "008",
     "name": "Product Packshots - B2B Catalog",
     "model": [
       "NanoBanana"
@@ -289,7 +356,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "008",
+    "id": "009",
     "name": "AI Presentations",
     "project": "ai-presentations",
     "items": [
@@ -310,7 +377,7 @@ window.PORTFOLIO_WORKS = [
     "description": "AI assisted presentations"
   },
   {
-    "id": "009",
+    "id": "010",
     "name": "Felline Feast - Cat Food Commercial",
     "model": [
       "ChatGPT"
@@ -332,7 +399,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "010",
+    "id": "011",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -379,7 +446,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "011",
+    "id": "012",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -406,7 +473,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "012",
+    "id": "013",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -415,69 +482,6 @@ window.PORTFOLIO_WORKS = [
     "category": "Environments & Sci-Fi",
     "year": "",
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
-  },
-  {
-    "id": "013",
-    "name": "Custom Characters",
-    "model": [
-      "Midjourney",
-      "ChatGPT",
-      "NanoBanana",
-      "Claude"
-    ],
-    "category": "Creatures & Art",
-    "year": "",
-    "description": "Characters tailored for the specific needs",
-    "project": "custom-characters",
-    "items": [
-      {
-        "file": "images/environment_female-explorer_01.png",
-        "name": "Female Explorer",
-        "description": "Sci-fi cinematic female explorer character in an expansive landscape.",
-        "category": "Environments & Sci-Fi",
-        "model": [
-          "Midjourney"
-        ]
-      },
-      {
-        "youtube": "https://youtu.be/E64jBLGlYHY",
-        "name": "Female Explorer Animation"
-      },
-      {
-        "file": "images/art_mr-fox-mascot_01.png",
-        "name": "Mr. Fox Gentleman Mascot",
-        "description": "Sophisticated fox character illustration in tailored vintage gentleman attire.",
-        "model": [
-          "Midjourney",
-          "ChatGPT"
-        ]
-      },
-      {
-        "file": "images/art_captain-lizzard_01.jpg",
-        "name": "Captain Lizzard",
-        "description": "Photorealistic anthropomorphic lizzard character visualization.",
-        "model": [
-          "NanoBanana",
-          "Claude"
-        ]
-      },
-      {
-        "file": "images/art_mario-doom-slayer_01.png",
-        "name": "Mario Doom Slayer",
-        "description": "Mario and Doom Slayer character crossover.",
-        "model": [
-          "ChatGPT"
-        ]
-      },
-      {
-        "file": "images/art_fox-biker-squad_01.png",
-        "name": "Fox Biker Squad",
-        "model": [
-          "Midjourney"
-        ],
-        "description": "Whimsical illustration of anthropomorphic fox bikers dressed in vintage leather motorcycle jackets."
-      }
-    ]
   },
   {
     "id": "014",
