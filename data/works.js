@@ -56,7 +56,8 @@ window.PORTFOLIO_WORKS = [
       "Midjourney",
       "ChatGPT",
       "NanoBanana",
-      "Claude"
+      "Claude",
+      "Omni Flash"
     ],
     "category": "Creatures & Art",
     "year": "",
@@ -129,40 +130,7 @@ window.PORTFOLIO_WORKS = [
   },
   {
     "id": "003",
-    "name": "Product Packshots - E-Commerce",
-    "model": [
-      "NanoBanana"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings.",
-    "project": "packshots-e-commerce",
-    "items": [
-      {
-        "file": "images/packshots/E-Commerce/analog-wristwatch.jpg",
-        "name": "Analog wristwatch"
-      },
-      {
-        "file": "images/packshots/E-Commerce/glass-perfume-bottle.jpg",
-        "name": "Glass perfume bottle"
-      },
-      {
-        "file": "images/packshots/E-Commerce/running-sneaker.jpg",
-        "name": "Running sneaker"
-      },
-      {
-        "file": "images/packshots/E-Commerce/skincare-serum-dropper-bottle.jpg",
-        "name": "Skincare serum dropper bottle"
-      },
-      {
-        "file": "images/packshots/E-Commerce/wireless-earbuds-charging-case.jpg",
-        "name": "Wireless earbuds charging case"
-      }
-    ]
-  },
-  {
-    "id": "004",
-    "name": "Product Packshots - Web Hero Banners",
+    "name": "Product Packshots",
     "model": [
       "NanoBanana"
     ],
@@ -190,56 +158,81 @@ window.PORTFOLIO_WORKS = [
       {
         "file": "images/packshots/Web_Hero_Banners/scented-candle-in-amber-jar.jpg",
         "name": "Scented candle in amber jar"
-      }
-    ]
-  },
-  {
-    "id": "005",
-    "name": "Product Packshots - Apparel",
-    "model": [
-      "NanoBanana",
-      "Midjourney"
-    ],
-    "category": "Characters & Fashion",
-    "year": "",
-    "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
-    "project": "packshots-apparel",
-    "crop": "top",
-    "items": [
+      },
+      {
+        "file": "images/packshots/E-Commerce/analog-wristwatch.jpg",
+        "name": "Analog wristwatch",
+        "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings."
+      },
+      {
+        "file": "images/packshots/E-Commerce/glass-perfume-bottle.jpg",
+        "name": "Glass perfume bottle",
+        "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings."
+      },
+      {
+        "file": "images/packshots/E-Commerce/running-sneaker.jpg",
+        "name": "Running sneaker",
+        "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings."
+      },
+      {
+        "file": "images/packshots/E-Commerce/skincare-serum-dropper-bottle.jpg",
+        "name": "Skincare serum dropper bottle",
+        "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings."
+      },
+      {
+        "file": "images/packshots/E-Commerce/wireless-earbuds-charging-case.jpg",
+        "name": "Wireless earbuds charging case",
+        "description": "Square e-commerce product shots with studio lighting, ready for marketplace listings."
+      },
       {
         "file": "images/packshots/Apparel/african-man-black-t-shirt-urban-studio.jpg",
         "name": "African man - black t-shirt - urban studio",
         "model": [
           "NanoBanana"
-        ]
+        ],
+        "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/packshots/Apparel/african-woman-crewneck-sweatshirt-autumn-park.jpg",
         "name": "African woman - crewneck sweatshirt - autumn park",
         "model": [
           "NanoBanana"
-        ]
+        ],
+        "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/packshots/Apparel/caucasian-man-hoodie-lakeside-outdoors.jpg",
         "name": "Caucasian man - hoodie - lakeside outdoors",
         "model": [
           "NanoBanana"
-        ]
+        ],
+        "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/packshots/Apparel/caucasian-woman-white-t-shirt-city-street.jpg",
         "name": "Caucasian woman - white t-shirt - city street",
         "model": [
           "NanoBanana"
-        ]
+        ],
+        "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/packshots/Apparel/latina-woman-oversized-hoodie-cozy-apartment.jpg",
         "name": "Latina woman - oversized hoodie - cozy apartment",
         "model": [
           "NanoBanana"
-        ]
+        ],
+        "description": "Apparel lifestyle shots: t-shirts, hoodies and sweatshirts on models in studio, urban and outdoor settings.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/fashion_tee-mockup-black_01.png",
@@ -247,7 +240,9 @@ window.PORTFOLIO_WORKS = [
         "model": [
           "Midjourney"
         ],
-        "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows."
+        "description": "Outdoor portrait photography render highlighting fabric texture, natural skin tones, and soft shadows.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/fashion_tee-mockup-olive_01.png",
@@ -255,7 +250,9 @@ window.PORTFOLIO_WORKS = [
         "model": [
           "Midjourney"
         ],
-        "description": "Natural studio portrait study capturing subtle facial expressions and garment drape."
+        "description": "Natural studio portrait study capturing subtle facial expressions and garment drape.",
+        "category": "Characters & Fashion",
+        "crop": "top"
       },
       {
         "file": "images/fashion_tee-mockup-white_01.png",
@@ -263,111 +260,89 @@ window.PORTFOLIO_WORKS = [
         "model": [
           "Midjourney"
         ],
-        "description": "Clean minimalist studio portrait exploring photorealistic lighting and realistic micro-details."
-      }
-    ]
-  },
-  {
-    "id": "006",
-    "name": "Product Packshots - Social Media",
-    "model": [
-      "NanoBanana"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes.",
-    "project": "packshots-social-media",
-    "items": [
+        "description": "Clean minimalist studio portrait exploring photorealistic lighting and realistic micro-details.",
+        "category": "Characters & Fashion",
+        "crop": "top"
+      },
       {
         "file": "images/packshots/Social_Media/energy-drink-can-splash.jpg",
-        "name": "Energy drink can - splash"
+        "name": "Energy drink can - splash",
+        "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes."
       },
       {
         "file": "images/packshots/Social_Media/gaming-mouse-neon-and-particles.jpg",
-        "name": "Gaming mouse - neon and particles"
+        "name": "Gaming mouse - neon and particles",
+        "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes."
       },
       {
         "file": "images/packshots/Social_Media/ice-cream-pint-melting-and-toppings.jpg",
-        "name": "Ice cream pint - melting and toppings"
+        "name": "Ice cream pint - melting and toppings",
+        "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes."
       },
       {
         "file": "images/packshots/Social_Media/lipstick-levitation.jpg",
-        "name": "Lipstick - levitation"
+        "name": "Lipstick - levitation",
+        "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes."
       },
       {
         "file": "images/packshots/Social_Media/sunglasses-floating-with-color-shapes.jpg",
-        "name": "Sunglasses - floating with color shapes"
-      }
-    ]
-  },
-  {
-    "id": "007",
-    "name": "Product Packshots - Packaging Mockups",
-    "model": [
-      "NanoBanana"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Packaging and product concept mockups visualized as photoreal studio renders.",
-    "project": "packshots-packaging-mockups",
-    "items": [
+        "name": "Sunglasses - floating with color shapes",
+        "description": "Vertical dynamic product visuals for social media: splashes, levitation, particles and color shapes."
+      },
       {
         "file": "images/packshots/Packaging_Mockup/childrens-wooden-toy-box.jpg",
-        "name": "Children's wooden toy box"
+        "name": "Children's wooden toy box",
+        "description": "Packaging and product concept mockups visualized as photoreal studio renders."
       },
       {
         "file": "images/packshots/Packaging_Mockup/craft-beer-can.jpg",
-        "name": "Craft beer can"
+        "name": "Craft beer can",
+        "description": "Packaging and product concept mockups visualized as photoreal studio renders."
       },
       {
         "file": "images/packshots/Packaging_Mockup/loose-leaf-tea-tin-and-box.jpg",
-        "name": "Loose-leaf tea tin and box"
+        "name": "Loose-leaf tea tin and box",
+        "description": "Packaging and product concept mockups visualized as photoreal studio renders."
       },
       {
         "file": "images/packshots/Packaging_Mockup/plant-based-snack-pouch.jpg",
-        "name": "Plant-based snack pouch"
+        "name": "Plant-based snack pouch",
+        "description": "Packaging and product concept mockups visualized as photoreal studio renders."
       },
       {
         "file": "images/packshots/Packaging_Mockup/smart-speaker-product-concept.jpg",
-        "name": "Smart speaker product concept"
-      }
-    ]
-  },
-  {
-    "id": "008",
-    "name": "Product Packshots - B2B Catalog",
-    "model": [
-      "NanoBanana"
-    ],
-    "category": "Product & Tech",
-    "year": "",
-    "description": "Clean catalog-style product packshots for B2B and industrial catalogs.",
-    "project": "packshots-b2b-catalog",
-    "items": [
+        "name": "Smart speaker product concept",
+        "description": "Packaging and product concept mockups visualized as photoreal studio renders."
+      },
       {
         "file": "images/packshots/Catalogs_B2B/cordless-drill.jpg",
-        "name": "Cordless drill"
+        "name": "Cordless drill",
+        "description": "Clean catalog-style product packshots for B2B and industrial catalogs."
       },
       {
         "file": "images/packshots/Catalogs_B2B/ergonomic-office-chair.jpg",
-        "name": "Ergonomic office chair"
+        "name": "Ergonomic office chair",
+        "description": "Clean catalog-style product packshots for B2B and industrial catalogs."
       },
       {
         "file": "images/packshots/Catalogs_B2B/industrial-safety-helmet.jpg",
-        "name": "Industrial safety helmet"
+        "name": "Industrial safety helmet",
+        "description": "Clean catalog-style product packshots for B2B and industrial catalogs."
       },
       {
         "file": "images/packshots/Catalogs_B2B/kitchen-faucet.jpg",
-        "name": "Kitchen faucet"
+        "name": "Kitchen faucet",
+        "description": "Clean catalog-style product packshots for B2B and industrial catalogs."
       },
       {
         "file": "images/packshots/Catalogs_B2B/wi-fi-router.jpg",
-        "name": "Wi-Fi router"
+        "name": "Wi-Fi router",
+        "description": "Clean catalog-style product packshots for B2B and industrial catalogs."
       }
     ]
   },
   {
-    "id": "009",
+    "id": "004",
     "name": "AI Presentations",
     "project": "ai-presentations",
     "items": [
@@ -388,7 +363,7 @@ window.PORTFOLIO_WORKS = [
     "description": "AI assisted presentations"
   },
   {
-    "id": "010",
+    "id": "005",
     "name": "Felline Feast - Cat Food Commercial",
     "model": [
       "ChatGPT"
@@ -410,7 +385,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "011",
+    "id": "006",
     "name": "3D Print Miniatures",
     "model": [
       "Midjourney"
@@ -457,7 +432,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "012",
+    "id": "007",
     "name": "Clicker Device",
     "model": [
       "ChatGPT"
@@ -484,7 +459,7 @@ window.PORTFOLIO_WORKS = [
     ]
   },
   {
-    "id": "013",
+    "id": "008",
     "name": "Space Beer Fest",
     "file": "images/environment_space-beer-fest_01.png",
     "model": [
@@ -495,7 +470,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Atmospheric sci-fi scene featuring a converted orbital module with ambient neon illumination."
   },
   {
-    "id": "014",
+    "id": "009",
     "name": "Coastal Lighthouse at Twilight",
     "file": "images/environment_coastal-lighthouse_01.jpg",
     "model": [
@@ -506,7 +481,7 @@ window.PORTFOLIO_WORKS = [
     "description": "Dramatic sea cliff landscape with a towering lighthouse, moody volumetric fog, and ocean waves."
   },
   {
-    "id": "015",
+    "id": "010",
     "name": "Lily of the Valley in Ceramic Vase",
     "file": "images/art_lily-of-the-valley_01.png",
     "model": [
