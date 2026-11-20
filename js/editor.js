@@ -43,6 +43,7 @@
   const modelCheckboxGroup = document.getElementById('modelCheckboxGroup');
   const editFieldCategory = document.getElementById('editFieldCategory');
   const editFieldYear = document.getElementById('editFieldYear');
+  const editFieldCrop = document.getElementById('editFieldCrop');
   const editFieldDesc = document.getElementById('editFieldDesc');
   const editFieldYoutube = document.getElementById('editFieldYoutube');
   const editFieldYoutubeWrap = document.getElementById('editFieldYoutubeWrap');
@@ -104,7 +105,7 @@
   const editFieldItemsWrap = document.getElementById('editFieldItemsWrap');
   let currentEditingItem = null;
   let editingItemIndex = -1; // >= 0 while one item of a project is being edited
-  const ITEM_FIELDS = ['name', 'description', 'year', 'category', 'model'];
+  const ITEM_FIELDS = ['name', 'description', 'year', 'category', 'model', 'crop'];
   let draggedItemIndex = null;
 
   function init() {
@@ -376,6 +377,7 @@
     }
 
     editFieldDesc.value = view.description || '';
+    if (editFieldCrop) editFieldCrop.value = ['top', 'bottom'].includes(view.crop) ? view.crop : '';
     if (editFieldYoutube) editFieldYoutube.value = view.youtube ? toYouTubeLink(view.youtube) || view.youtube : '';
     if (editFieldYoutubeWrap) editFieldYoutubeWrap.style.display = isProject(item) ? 'none' : 'block';
     if (editFieldItems) {
@@ -411,6 +413,12 @@
     // Category, Year
     currentEditingItem.category = editFieldCategory ? editFieldCategory.value : '3D Miniatures';
     currentEditingItem.year = editFieldYear ? editFieldYear.value : '';
+
+    // Preview crop: "top" / "bottom" anchor the card thumbnail; Center = no field
+    if (editFieldCrop) {
+      if (editFieldCrop.value) currentEditingItem.crop = editFieldCrop.value;
+      else delete currentEditingItem.crop;
+    }
     currentEditingItem.description = editFieldDesc.value.trim();
 
     // YouTube link: a valid link makes the work a video; clearing it turns it back into an image
@@ -1372,7 +1380,7 @@ window.PORTFOLIO_WORKS = ${JSON.stringify(window.PORTFOLIO_WORKS, null, 2)};
       }
     });
 
-    const autoSaveChangeFields = [editFieldCategory, editFieldYear, editFieldYoutube];
+    const autoSaveChangeFields = [editFieldCategory, editFieldYear, editFieldYoutube, editFieldCrop];
     autoSaveChangeFields.forEach(field => {
       if (field) {
         field.addEventListener('change', () => saveCurrentItem(false));

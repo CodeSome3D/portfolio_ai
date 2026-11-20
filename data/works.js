@@ -105,6 +105,7 @@ window.PORTFOLIO_WORKS = [
       {
         "file": "images/art_fox-biker-squad_01.png",
         "name": "Fox Biker Squad",
+        "crop": "top",
         "model": [
           "Midjourney"
         ],
